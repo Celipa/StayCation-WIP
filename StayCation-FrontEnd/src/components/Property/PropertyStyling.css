@@ -167,6 +167,156 @@ font-size: 1.2rem;
   font-size: 1rem;
   color: #000;
   top: 10rem;
+  border-radius: 18px;
+}
+.property-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-color: #fff;
+  border: 0.1rem solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  width: 100%;
+  max-width: 540px;
+  min-height: 420px;
+  color: #222;
+  border-radius: 18px;
+  text-align: left;
+  margin: 2rem auto 0 auto;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.5rem 0.5rem 1.5rem;
+}
+
+.property-price {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #222;
+}
+
+.property-name {
+  flex: 1;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #222;
+  letter-spacing: 0.5px;
+}
+
+.property-rating-badge {
+  background: #f7f7f7;
+  border-radius: 8px;
+  padding: 3px 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid #e0e0e0;
+  font-size: 1.1rem;
+}
+
+.img-box {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 0 0 0 0;
+  margin-bottom: 0.5rem;
+}
+
+.property-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+
+
+.property-info-row {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.property-info-row-bottom {
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+  gap: 1.5rem;
+}
+
+.accessabilities-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 6px;
+  background-color: #e6e6e6;
+  border-radius: 12px;
+  padding: 8px;
+  width: 56px;
+  height: 56px;
+  justify-items: center;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 1px solid #ccc;
+}
+
+.accessabilities-box .icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+.property-icon-text {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #222;
+}
+
+.property-icon-text .icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.property-icon-text .icon[alt="Plats"] { filter: hue-rotate(180deg); }
+.property-icon-text .icon[alt="Yta"] { filter: hue-rotate(90deg); }
+.property-icon-text .icon[alt="Transport"] { filter: hue-rotate(270deg); }
+
+.property-info-row:last-child {
+  margin-bottom: 0;
+}
+
+.property-amenities {
+  margin-top: 0.5rem;
+  color: #7a5d1b;
+  font-size: 1.08rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.property-amenities .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.property-review {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #888;
+  font-size: 1.05rem;
 }
  .property-title h1{
     font-size: 2rem;

@@ -17,10 +17,21 @@ export const ShoppingCart = ({ isCheckoutPage, setIsOpen, className, onCheckout 
           </div>
         )}
         <div className='Item'>
-        { cart.map(item => (
-        <CartItem key={`cart_${item.product._id}`} item={item} className={className} />
-      ))}
-        </div>
+        {cart.map(item =>
+          item.product ? (
+            <div key={`cart_${item.product._id}`} className="cart-item">
+              <img
+                src={item.product.images && item.product.images[0]}
+                alt={item.product.title}
+                className="cart-item-thumbnail"
+                style={{ width: "60px", height: "40px", objectFit: "cover", borderRadius: "6px", marginRight: "10px" }}
+              />
+              <span>{item.product.title}</span>
+              <span>x{item.quantity}</span>
+            </div>
+          ) : null
+        )}
+      </div>
       </div>
       <div className={`cart-footer ${className}`}>
         <div className={`checkout-summery-box ${className}`}>

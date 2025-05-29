@@ -43,70 +43,100 @@ export const Navbar = ({ setSelectedCategory }) => {
   const categoriesWithReset = ['All Properties', ...categories];
 
   return (
-    <>
+  <>
+    <header>
       <div className="Navbar2">
-      <header>
-        <section className="header-items">
-          <div className="menu">
-            </div>
-            <div className='StayCation-logo'>
+        <section className="header-items navbar-flex">
+          {/* Logo - vänster */}
+          <div className="StayCation-logo navbar-left">
             <Link to="/">
-            <img src='\src\layouts\Staycation.png' alt="Staycation Logo" className='SC-logo'/>
-             </Link>
-            </div>
-            
-            
-            <nav className="navbar">
-              <NavLink to="/">Hem</NavLink>
-              <NavLink to="/contact">Kontakta Oss</NavLink>
-            </nav>
+              <img src="/src/layouts/Staycation.png" alt="Staycation Logo" className="SC-logo" />
+            </Link>
+          </div>
 
-            
-            <div className="icons">
+          {/* Navigation - mitten */}
+          <nav className="navbar navbar-center">
+            <NavLink to="/">Hem</NavLink>
+            <NavLink to="/contact">Kontakta Oss</NavLink>
+          </nav>
+
+          {/* Ikoner - höger */}
+          <div className="icons navbar-right">
+            {/* Cart */}
             <div className="cart">
-            <ul>
+              <ul>
                 <li className="Cart">
-                  { totalQuantity > 0 && 
-                  <div className="weeeee">
-                  </div>}
+                  {totalQuantity > 0 && <div className="weeeee"></div>}
                   <Dropdown>
-                    <FaShoppingCart className='cart-icon'/>
+                    <FaShoppingCart className="cart-icon" />
                     <span className="cart-items-total">{totalQuantity}</span>
                   </Dropdown>
                 </li>
               </ul>
             </div>
-              <NavLink to="#" className="user" onClick={() => setUserDropdownActive(!isUserDropdownActive)}>
-                <FaUser />
-               {isUserDropdownActive && (
-            <div className="profile" ref={userDropdownRef}>
-              <button onClick={() => setUserDropdownActive(false)}></button>
-              <ul>
-                <li><NavLink className="auth-link" to="/login">Login</NavLink></li>
-                <li><NavLink className="auth-link" to="/register">Register</NavLink></li>
-                    </ul>
-                  </div>
-                )}
-            </NavLink>
-            <NavLink to="#" className="gear" onClick={() => setGearDropdownActive(!isGearDropdownActive)}>
-              <FiSettings />
-                {isGearDropdownActive && (
-                <div className="help" ref={GearDropdownRef}>
-                    <button onClick={() => setGearDropdownActive(false)}></button>
-                    <ul>
-                    <li className='hidden'><NavLink className="hidden" to="/orders">Orders</NavLink></li>
-                <li className='hidden'><NavLink className="hidden" to="/profile">Profile</NavLink></li>
-                <li className='hidden'><NavLink className="hidden" to="/login" onClick={logout}>Logout</NavLink></li>
-                    </ul>
+
+            {/* User Dropdown */}
+            <NavLink
+              to="#"
+              className="user"
+              onClick={() => setUserDropdownActive(!isUserDropdownActive)}
+            >
+              <FaUser />
+              {isUserDropdownActive && (
+                <div className="profile" ref={userDropdownRef}>
+                  <button onClick={() => setUserDropdownActive(false)}></button>
+                  <ul>
+                    <li>
+                      <NavLink className="auth-link" to="/login">
+                        Login
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink className="auth-link" to="/register">
+                        Register
+                      </NavLink>
+                    </li>
+                  </ul>
                 </div>
-                )}
+              )}
             </NavLink>
-            </div> 
-          </section>
-        </header>
+
+            {/* Gear Dropdown */}
+            <NavLink
+              to="#"
+              className="gear"
+              onClick={() => setGearDropdownActive(!isGearDropdownActive)}
+            >
+              <FiSettings />
+              {isGearDropdownActive && (
+                <div className="help" ref={GearDropdownRef}>
+                  <button onClick={() => setGearDropdownActive(false)}></button>
+                  <ul>
+                    <li className="hidden">
+                      <NavLink className="hidden" to="/orders">
+                        Orders
+                      </NavLink>
+                    </li>
+                    <li className="hidden">
+                      <NavLink className="hidden" to="/profile">
+                        Profile
+                      </NavLink>
+                    </li>
+                    <li className="hidden">
+                      <NavLink className="hidden" to="/login" onClick={logout}>
+                        Logout
+                      </NavLink>
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </NavLink>
+          </div>
+        </section>
       </div>
-    </>
-  )
+    </header>
+  </>
+)
 }
 export default Navbar;
 

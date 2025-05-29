@@ -44,3 +44,15 @@
       padding: 1rem;
       border: 1px solid #ccc;
     }
+
+    /* Lägg till i din CSS-fil */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+.cart-item-thumbnail {
+  border: 1px solid #ddd;
+  background: #fafafa;
+}

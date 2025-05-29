@@ -17,7 +17,7 @@ const userSchema: Schema<IUser> = new mongoose.Schema({
   lastName: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   passwordHash: { type: String, required: true },
-  profilePicture: { type: String },
+  profilePicture: { type: File, default: 'https://www.example.com/default-profile-picture.png' },
 }, {
   timestamps: true
 });

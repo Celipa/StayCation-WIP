@@ -111,7 +111,6 @@ Projektet saknar:
 Betalnings sida
 Bekräftat köp sida.
 Fungerande profil sida.
-Fungerande sök bar.
 Fungerande datum komponenter.
 
 Vad som fungerar:

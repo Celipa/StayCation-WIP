@@ -4,11 +4,12 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const dotenv = require('dotenv');
 
+
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const MONGO_URI = process.env.MONGO_URI || "mongodb+srv://AlvaDb:BytMig123/testdb.s0fjhfi.mongodb.net/NodeAPI";
+const MONGO_URI = process.env.MONGO; 
 
 // Middleware
 app.use(express.json());

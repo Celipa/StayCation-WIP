@@ -1,6 +1,5 @@
 import React, { useState, useContext} from 'react';
 import { useNavigate } from 'react-router-dom';
-import Navbar from '../components/Navbar/Navbar';
 import UserContext from '../contexts/userContext';
 import './css/Login.css';
 
@@ -108,7 +107,7 @@ function Login() {
           <li><a href="/register">Register here</a></li>
         </div>
       </form>
-      <Navbar logout={logout} isLoggedIn={isLoggedIn} />
+
     </div>
   );
 }

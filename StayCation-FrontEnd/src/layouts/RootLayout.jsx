@@ -7,13 +7,8 @@ import './RootLayout.css'
 function RootLayout() {
   return (
     <Providers>
-      <div className="Body">
         <Navbar />
-        
-        <div className="StayCation">
           <Outlet />
-        </div>
-      </div>
       <Footer />
     </Providers>
   )

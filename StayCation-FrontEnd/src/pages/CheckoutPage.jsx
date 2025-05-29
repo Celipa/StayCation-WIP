@@ -9,7 +9,8 @@ function CheckoutPage() {
   const { user, userId } = useContext(UserContext);
   const navigate = useNavigate();
   const { cart, clearCart } = useCart();
-  const totalPrice = cart.reduce((total, item) => total + item.product.price * item.quantity, 0);
+  const validCart = cart.filter(item => item.product);
+  const totalPrice = validCart.reduce((total, item) => total + item.product.price * item.quantity, 0);
   const token = localStorage.getItem('token');
 
   const checkout = async () => {
@@ -27,10 +28,10 @@ function CheckoutPage() {
         },
         body: JSON.stringify({
           user: userId,
-          products: cart.map((item) => ({
-            productId: item.product._id,
-            quantity: item.quantity,
-          })),
+          products: validCart.map((item) => ({
+          productId: item.product._id,
+          quantity: item.quantity,
+        })),
           totalPrice,
         }),
       });

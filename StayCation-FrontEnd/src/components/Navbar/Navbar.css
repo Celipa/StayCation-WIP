@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,23 +9,27 @@
   text-transform: capitalize;
   transition: 0.2s linear;
 
-}
+} */
 
 /*--Navbar*/
-section {
+/* section {
   padding: 2rem;
   margin: 0 auto;
   max-width: 1200px;
-}
-.Navbar2 {
-  position: fixed;
+} */
+/* .Navbar2 {
+  display: flex;
   width: 100%;
+  justify-content: space-evenly;
   align-items: center;
+  
+
   z-index: 1;
-}
+} */
+
 @media (prefers-color-scheme: light) {
   .Navbar2 {
-    display: block;
+    display: flex;
     border: 1px solid var(--Gray, #828181);
     background: white;
   }
@@ -43,11 +47,12 @@ section {
 }
 @media (prefers-color-scheme: dark) {
   .Navbar2 {
-    display: block;
+    display: flex;
     border: 1px solid var(--Gray, #828181);
     background: rgb(16,19,47);
     background: radial-gradient(circle, rgba(16,19,47,1) 45%, rgba(40,89,106,1) 83%);
-    box-shadow: #fff 0px 40px 20px;
+    box-shadow: #fff 0px 1px 20px;
+    padding: 1% 5%;
   }
   header .navbar a {
     font-size: 1.8rem;
@@ -473,5 +478,133 @@ header .icons a:hover {
   }
   .products .box-container {
     display: contents;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Flexbox för huvudlayout */
+.header-items.navbar-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 2rem;
+  min-height: 80px;
+  gap: 1rem;
+}
+
+/* Vänster: Logga */
+.navbar-left {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 150px;
+}
+.StayCation-logo img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Mitten: Navigation */
+.navbar-center {
+  flex: 2 1 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.navbar-center a {
+  font-size: 1.2rem;
+  color: inherit;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  transition: background 0.2s;
+}
+.navbar-center a.active,
+.navbar-center a:hover {
+  background: #e0e0e0;
+  color: #2c2c2c;
+}
+
+/* Höger: Ikoner */
+.navbar-right.icons {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  min-width: 120px;
+}
+.icons .cart {
+  position: relative;
+}
+.cart-items-total {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  font-size: 12px;
+  color: #fff;
+  background: #9e0000;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dropdowns */
+.profile, .help {
+  right: 0;
+  left: auto;
+  min-width: 150px;
+  z-index: 10;
+}
+
+/* Responsivitet */
+@media (max-width: 900px) {
+  .header-items.navbar-flex {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+  .navbar-left,
+  .navbar-center,
+  .navbar-right.icons {
+    justify-content: center;
+    min-width: unset;
+  }
+  .navbar-center {
+    margin: 0.5rem 0;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-items.navbar-flex {
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.5rem;
+  }
+  .navbar-center a {
+    font-size: 1rem;
+    padding: 0.3rem 0.7rem;
+  }
+  .StayCation-logo img {
+    width: 90px;
   }
 }

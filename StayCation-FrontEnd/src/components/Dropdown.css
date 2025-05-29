@@ -16,7 +16,14 @@
   .menu-button button:hover {
     color: #383838;
   }
-
+  .cart-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+  }
   /*checkout-btn styling*/
   .menu-button .cart-item a {
     color: white;
@@ -34,13 +41,10 @@
   /*cart dropdown styling*/
   .cart-product{
     position: absolute;
-    left: -10rem;
-    top: 3rem;
+    top: 1rem;
     padding: .4rem;
     background-color: #dbdbdb;
-    width: 22rem;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: -1;
   }
 
   .dropdown .cart-product img{
