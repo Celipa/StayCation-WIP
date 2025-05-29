@@ -108,9 +108,13 @@ Administratörspanel: För plattformsadministratörer att övervaka och hantera 
 
 På Grund av problem med dator och program har projektet inte blivit färdigt.
 Projektet saknar:
+
 Betalnings sida
+
 Bekräftat köp sida.
+
 Fungerande profil sida.
+
 Fungerande datum komponenter.
 
 Vad som fungerar:
