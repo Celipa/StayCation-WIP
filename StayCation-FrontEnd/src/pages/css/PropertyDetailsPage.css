@@ -1,4 +1,4 @@
-/* propertyDetailsPage.css */
+/* propertyDetailsPage.css
 
 .Propertydetail-body {
     display: flex;
@@ -28,7 +28,6 @@
     gap: 10px;
 }
 
-/* Exempel: PropertyDetailsPage.css */
 .property-icon {
   width: 22px;
   height: 22px;
@@ -77,23 +76,276 @@
     border: 2px solid #4CAF50;
 }
 .big-image{
-    border-radius: 0.5rem; /* equivalent to rounded-lg */
+    border-radius: 0.5rem;
   }
   
   .Images-small{
-    display: flex; /* equivalent to flex */
-    gap: 0.5rem; /* equivalent to gap-2 */
-    margin-top: 0.5rem; /* equivalent to mt-2 */
+    display: flex; 
+    gap: 0.5rem; 
+    margin-top: 0.5rem; 
     cursor: pointer;
   }
   
   
   .property-img {
-    width: 4rem; /* equivalent to w-16 */
-    height: 4rem; /* equivalent to h-16 */
-    object-fit: cover; /* equivalent to object-cover */
+    width: 4rem; 
+    height: 4rem; 
+    object-fit: cover; 
   }
   .property-detail .property-img:hover{
     border: 2px solid #929292;
     transform: scale(1.10);
+  } */
+
+
+
+
+
+  
+  .Propertydetail-body {
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  min-height: 100vh;
+  padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.property-card-main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1200px;
+    margin: 0 auto;
+  padding: 2rem;
+}
+.Property-detailcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  max-width: 1100px;
+  margin: 2rem auto;
+  overflow: hidden;
+  justify-content: center;
+  align-items: baseline;
+  align-content: flex-start;
+}
+
+.Property-images {
+  flex: 1 1 650px;
+  min-width: 350px;
+  max-width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: fit-content;
+  background: #486581;
+    border-radius: 5px;
+}
+
+.big-image {
+  width: 95%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.Images-small {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 0.5rem;
+}
+
+.next-img {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border 0.2s;
+}
+.next-img:hover, .next-img:focus {
+  border: 2px solid #0077b6;
+}
+.property-img {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.details {
+  flex: 2 1 400px;
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.property-header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.property-name {
+  font-size: 2.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #1a2a3a;
+}
+
+.purchase-details {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.property-price, .property-rating {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.property-included {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 0.7rem;
+}
+.property-included p {
+  font-size: 1.1rem;
+  color: #000000;
+}
+.property-beds, .property-baths {
+  width: 28px;
+  height: 28px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.property-access {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.property-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  border-radius: 4px;
+  background: #f0f0f0;
+  padding: 2px;
+}
+.property-info {
+  display: flex;
+    flex-direction: column;
+    width: 100%;
+  align-items: flex-start;
+  align-content: flex-start;
+    margin: 1.5rem;
+  margin-bottom: 0.5rem;
+  background-color: #e2e2e2;
+}
+.property-desc {
+  margin: 1.2rem 0 0.7rem 0;
+  font-size: 1.08rem;
+  color: #333;
+}
+
+.property-city {
+  font-size: 1.05rem;
+  color: #555;
+}
+.calendar-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #cfcfcf;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.calendar-section label {
+  font-weight: 500;
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+.react-datepicker-wrapper {
+  margin-left: 0.5rem;
+}
+.react-datepicker-wrapper,
+.react-datepicker__input-container {
+  width: 100%;
+}
+
+.react-datepicker__input-container input {
+  padding: 0.5rem 1rem;
+  border: 1.5px solid #0077b6;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f7fafd;
+  transition: border 0.2s;
+}
+
+.react-datepicker__input-container input:focus {
+  border: 1.5px solid #023e8a;
+  outline: none;
+}
+
+
+.property-info-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.Add-btn {
+  margin-top: 1.5rem;
+  background: #0077b6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  transition: background 0.2s;
+}
+.Add-btn:hover, .Add-btn:focus {
+  background: #023e8a;
+}
+
+.CartIcon {
+  font-size: 1.3rem;
+  vertical-align: middle;
+}
+
+
+.property-map {
+    height: 500px;
+    width: 400px;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+
+
+@media (max-width: 900px) {
+  .Property-detailcontainer {
+    flex-direction: column;
+    max-width: 98vw;
   }
+  .Property-images, .details {
+    padding: 1rem;
+  }
+}

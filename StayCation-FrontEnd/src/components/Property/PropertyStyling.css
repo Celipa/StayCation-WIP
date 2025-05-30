@@ -162,13 +162,7 @@ font-size: 1.2rem;
   padding: 6rem;
   border-bottom: 1px solid #ccc;
 }
-.property-header {
-  position: relative;
-  font-size: 1rem;
-  color: #000;
-  top: 10rem;
-  border-radius: 18px;
-}
+
 .property-card {
   display: flex;
   flex-direction: column;
