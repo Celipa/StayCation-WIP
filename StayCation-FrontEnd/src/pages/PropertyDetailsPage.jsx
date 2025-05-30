@@ -148,7 +148,6 @@ function PropertyDetailsPage() {
               <p className="property-city">Vart: {property.location}</p>
               <p className="property-desc">{property.description}</p>
             </div>
-        
         <div className="property-map">
           <h2>Karta</h2>
           <p>Här kan du se var boendet är beläget.</p>

@@ -51,7 +51,7 @@ export const PropertyCard = ({ property }) => {
             </div>
 
             {/* Rad 2: Bekvämligheter, Recension, Accessabilities */}
-            <div className="property-info-row property-info-row-bottom">
+            <div className="property-card-row">
               {property.amenities && property.amenities.length > 0 && (
                 <span className="property-icon-text">
                   <img src="https://cdn-icons-png.flaticon.com/512/609/609803.png" className="icon" alt="Bekvämligheter" />

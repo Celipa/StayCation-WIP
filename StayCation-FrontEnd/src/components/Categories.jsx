@@ -22,7 +22,6 @@ const Categories = () => {
 
   return (
     <div>
-      <Navbar setSelectedCategory={setSelectedCategory} />
       <PropertyList properties={properties} />
     </div>
   );
