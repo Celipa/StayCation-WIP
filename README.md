@@ -115,13 +115,11 @@ Bekräftat köp sida.
 
 Fungerande api hämtning för profil sida.
 
-Fungerande datum komponenter.
-
-Styling till detaljsidan
-
-Styling till Order sidan.
+Styling till checkout sidan.
 
 Vad som fungerar:
+API för karthämtning på detaljsida
+Api för att lägga till boende i varukorgen.
 Login sida
 Registerings sida
 Landingpage
