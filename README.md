@@ -108,14 +108,22 @@ Administratörspanel: För plattformsadministratörer att övervaka och hantera 
 
 På Grund av problem med dator och program har projektet inte blivit färdigt.
 Projektet saknar:
+
 Betalnings sida
+
 Bekräftat köp sida.
-Fungerande profil sida.
+
+Fungerande api hämtning för profil sida.
+
 Fungerande datum komponenter.
+
+Styling till detaljsidan
+
+Styling till Order sidan.
 
 Vad som fungerar:
 Login sida
 Registerings sida
 Landingpage
 Boende sidan
-Detaljsidan
+Sökbar på startsidan
